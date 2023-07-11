@@ -5,7 +5,7 @@ import requests
 from threading import Thread
 from DB import WorkingWithDB
 
-TOKEN = "6079864933:AAETye-fcdft-JebcdOhrat5Dly5jzUveJg"
+TOKEN = ""
 bot = telebot.TeleBot(TOKEN)
 NAMES = ['зимина арина', 'губанов георгий', 'тропицын максим', 'суховеркова алина', 'яруллин ильшат', 'глазов сергей',
          'тихонов михаил', 'тузов артем', 'циунель елизавета', 'бодин артем', 'сайфетдиарова адиля',
