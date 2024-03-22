@@ -29,6 +29,15 @@ class WorkingWithDB:
         except Exception:
             return 0
 
+    def addSelectionNames(self, NAMES):
+        try:
+            for i in NAMES:
+                self.cursor.execute("INSERT INTO NAMES (Name, Surname) VALUES (?, ?)", (i[0], i[1],))
+                self.connection.commit()
+            return 1
+        except Exception:
+            return 0
+
     def getLink(self):
         self.cursor.execute("SELECT link FROM link WHERE id = 0")
         return self.cursor.fetchone()
@@ -43,6 +52,13 @@ class WorkingWithDB:
         self.cursor.execute("SELECT * FROM data")
         return self.cursor.fetchall()
 
+    def getRegisteredIds(self):
+        self.cursor.execute("SELECT ID FROM data")
+        return self.cursor.fetchall()
+
+    def getAllNamesOnSelection(self):
+        self.cursor.execute("SELECT Name, Surname FROM NAMES")
+        return self.cursor.fetchall()
+
 
 dbClone = WorkingWithDB()
-
