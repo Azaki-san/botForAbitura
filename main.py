@@ -4,7 +4,7 @@ import telebot
 from DB import WorkingWithDB
 from transliterate import translit
 
-TOKEN = "6079864933:AAETye-fcdft-JebcdOhrat5Dly5jzUveJg"
+TOKEN = ""
 bot = telebot.TeleBot(TOKEN)
 wwb = WorkingWithDB()
 registeredIds = [x[0] for x in wwb.getRegisteredIds()]
